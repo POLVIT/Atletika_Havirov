@@ -1,0 +1,12 @@
+{% extends 'Atletika_Havirov/base.html' %}
+
+{% block body_block %}
+    {% for v in vykazy %}
+    {{ v }}
+    {% endfor %}
+
+    <form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    </form>
+
+{%  endblock %}

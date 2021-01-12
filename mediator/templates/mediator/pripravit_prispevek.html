@@ -1,0 +1,276 @@
+{% extends 'Atletika_Havirov/BaseNoNavbar.html' %}
+{% block body_block %}
+{# Tady je to pro datetime picker #}
+    <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- XDSoft DateTimePicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
+
+
+
+
+<div class="jumbotron">
+    <h1 class="text-center">Nový příspěvek</h1>
+    <table class="table-warning">
+<thead>
+    <tr>
+        <h3>Dodržuj tyto pokyny:</h3>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td></td><td><h5>Pokud dáváš příspěvek na web, fotky musí být nahrány z uložiště</h5></td>
+    </tr>
+    <tr>
+     <td></td><td> <h5>Pro posty na FB a IG můžeš použít fotky zkopírované z příspěvku,
+         ten však nesmí být vymazán dokud neporoběhne jeho upload na FB,IG</h5></td>
+    </tr>
+    <tr>
+      <td></td><td><h5>Nejdříve dokonči nahrávání fotek, až to budeš mít hotové začni upravovat text.
+                V opačném případě s každou změnou ve fotkách ztratíš úpravy v textu!</h5></td>
+    </tr>
+  </tbody>
+</table>
+
+    <h3 class="text-center"> </h3>
+    <h5 class="text-center"></h5>
+    <H1></H1>
+    <button type="button" class="btn btn-outline-dark col" data-toggle="modal" data-target="#exampleModalLong">Vybrat fotky z uložiště</button>
+    <form method="post">{% csrf_token %}
+    <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="exampleModalLongTitle">Výběr fotek z uložiště</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+              <div class="modal-body">
+
+                          {% for url in urls %}
+                                <div class="col-12 custom-control custom-checkbox image-checkbox m-3 ">
+                                      <label class="block-check" >
+                                      <img src="{{ url}}" class="img-responsive " style="max-width: 90%" />
+                                      <input type="checkbox" name="{{ url }}">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                </div>
+                          {% endfor %}
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavřít</button>
+                  <button type="submit" class="btn btn-primary" name="nahratModal" value="True">Použít vybrané</button>
+              </div>
+
+
+        </div>
+      </div>
+    </div>
+    </form>
+
+            <form method="post">{% csrf_token %}
+
+            {{ form.media }}
+            {{ form.as_p }}
+                <button type="submit" name="nahrat" value="True" class="btn btn-primary">Nahrát příspěvek</button>
+                <a href="{% url 'mediator_home' %}" class="btn btn-secondary">Zpět</a>
+            </form>
+
+    <form method="post">{% csrf_token %}
+        <div class="row">
+            {% for u in URL %}
+                 <div class="col-4 mb-4">
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="{{ u }}">
+                      <div class="card-img-overlay align-right">
+                          <button {% if forloop.first %}class="btn btn-outline-success float-left"{% else %}
+                                   class="btn btn-outline-light float-left"{% endif %}
+                                  type="submit" name="reorder" value="{{ u }}">IG</button>
+                          <button class="btn btn-outline-light float-right" type="submit" name="delete" value="{{ u }}"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                    </div>
+                 </div>
+            {% endfor %}
+        </div>
+    </form>
+    <script>
+        $('#{{form.fb_time.id_for_label}}').datetimepicker({ footer: true, modal: true, format:'Y-m-d H:i' });
+        $('#{{form.ig_time.id_for_label}}').datetimepicker({ footer: true, modal: true, format:'Y-m-d H:i' });
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        // init the state from the input
+        $(".image-checkbox").each(function () {
+            if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
+                $(this).addClass('image-checkbox-checked');
+            }
+            else {
+                $(this).removeClass('image-checkbox-checked');
+            }
+        });
+
+        // sync the state to the input
+        $(".image-checkbox").on("click", function (e) {
+            if ($(this).hasClass('image-checkbox-checked')) {
+                $(this).removeClass('image-checkbox-checked');
+                $(this).find('input[type="checkbox"]').first().removeAttr("checked");
+            }
+            else {
+                $(this).addClass('image-checkbox-checked');
+                $(this).find('input[type="checkbox"]').first().attr("checked", "checked");
+            }
+
+            e.preventDefault();
+        });
+    });
+</script>
+
+<style>
+  a {
+    color: #fff;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+/*--choice modal1--*/
+
+.openbtn{
+    margin-top:80px;
+}
+.modal-header {
+    padding: 15px;
+     border-bottom: none;
+}
+.modal-title{
+	font-weight:bold;
+}
+.modal-body.choice-modal{
+    position: relative;
+    padding: 0px;
+
+}
+
+.row.inner-scroll {
+    height: 445px;
+    overflow: auto;
+}
+
+.mycard-footer {
+    height: 25px;
+    background: #333333;
+    font-size: 15px;
+    text-indent: 10px;
+   /* border-radius: 0 0px 4px 4px;*/
+}
+
+.gallery-card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+	    height: 132px;
+		margin-bottom:14px;
+}
+.gallery-card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    /*padding: 1.25rem;*/
+}
+.gallery-card img {
+    height: 100px;
+    width: 100%;
+}
+label{
+    margin-bottom: 0 !important;
+}
+/*--checkbox--*/
+
+.block-check {
+    display: block;
+    position: relative;
+
+
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.block-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+	cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.block-check:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.block-check input:checked ~ .checkmark {
+    background-color: #2196F3;
+    border-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.block-check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.block-check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+</style>
+{%  endblock %}

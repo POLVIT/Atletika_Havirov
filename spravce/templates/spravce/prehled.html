@@ -1,0 +1,47 @@
+{% extends 'Atletika_Havirov/base.html' %}
+
+{% block body_block %}
+    <form method="post">{% csrf_token %}
+    <div class="mb-5">
+        {{ form }}
+
+        <button class="btn btn-primary" type="submit" name="hledat" value="True">Hledat</button>
+
+    </div>
+
+    {% for user in query %}
+        <table class="table table-borderless" style="border:solid black 2px">
+        <tbody>
+        <tr>
+            <td><input type="checkbox" name="oznaceni" value="{{ user.id }}"></td>
+            <td>{{ user.jmeno }} {{ user.prijmeni }}</td>
+            <td>{{ user.datum_narozeni }}</td>
+            <td><a class="btn btn-secondary" href="{% url 'prava' id=user.id %}">Přístupová práva</a></td>
+            <td>
+
+            {% if user.je_zkontrolovan %}
+                <a href="{% url 'zkontrolovat' id=user.id %}" class="btn btn-success" type="button">Zkontolován</a>
+            {% else %}
+                <a href="{% url 'zkontrolovat' id=user.id %}" class="btn btn-danger" type="button">Zkontolovat</a>
+            {% endif %}
+
+            </td>
+        </tr>
+        </tbody>
+        </table>
+
+    {% endfor %}
+
+
+
+
+
+       <div class="container fixed-bottom">
+            <nav class="nav bg-dark row " >
+            <button class="btn btn-outline-primary col " type="submit" name="prispevky" value="True">Příspěvky</button>
+            <button class="btn btn-outline-info col"  type="submit" name="skupiny" value="True">Skupiny</button>
+            <button class="btn btn-outline-danger col " type="submit" name="zprava" value="True">Zpráva </button>
+            </nav>
+       </div>
+    </form>
+{%  endblock %}

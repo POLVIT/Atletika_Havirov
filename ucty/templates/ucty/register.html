@@ -1,0 +1,9 @@
+{% extends 'Atletika_Havirov/base.html' %}
+{% block body_block %}
+    <div class="container">
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+    </div>
+{% endblock %}

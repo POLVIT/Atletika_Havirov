@@ -1,0 +1,34 @@
+{% extends 'Atletika_Havirov/base.html' %}
+{# Tady je to pro datetime picker #}
+    <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- XDSoft DateTimePicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
+
+
+{% block body_block %}
+   {{ user.jmeno }} {{ user.prijmeni }}
+    {{ user.prispevky }}
+    {% if user.gdpr %}
+     <img src="{{ user.gdpr.url }}" style="max-width: 90%">
+    {% else %}
+    NENAHRAL GDPR
+    {% endif %}
+    {% if user.lekarske_potvrzeni %}
+    <img src="{{ user.lekarske_potvrzeni.url }}" style="max-width: 90%">
+    {% else %}
+     NENAHRAL DOKTORA
+    {% endif %}
+    <form method="post">{% csrf_token %}
+    {{ form.media }}
+    {{ form }}
+    <button class="btn btn-success" type="submit">Vše v pořádku</button>
+    <a href="{% url 'prehled' %}" class="btn btn-secondary">Zpět</a>
+    </form>
+        <script>
+        $('#{{form.date.id_for_label}}').dateTimepicker({ footer: true, modal: true, format:'Y-m-d' });
+    </script>
+
+{%  endblock %}

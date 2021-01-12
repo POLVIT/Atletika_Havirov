@@ -1,0 +1,71 @@
+<!--Tady je pouze navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark" >
+
+        <div class="container">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                         aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
+
+                    <a class="navbar-brand" href="#" style="color: #50c9e3">  <img src="https://cdn0.iconfinder.com/data/icons/take-over-store-vol-3/64/ecommerce-3--130-512.png" width="45px" height="auto">
+                        Atletika Havířov 1965
+                    </a>
+
+
+
+
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+                        {% if perms.ucty.mediator  %}
+                         <li class="nav-item active">
+                            <a class="nav-link" style="color: #50c9e3" href="{% url 'mediator_home' %}">Média <span class="sr-only">(current)</span></a>
+                          </li>
+
+                        {% endif %}
+
+
+
+
+                          <li class="nav-item active">
+                            <a class="nav-link" style="color: #50c9e3" href="#">Aktuality <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item active">
+                            <a class="nav-link" style="color: #50c9e3" href="#">Rekordy <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item active">
+                            <a class="nav-link" style="color: #50c9e3" href="#">Fotky <span class="sr-only">(current)</span></a>
+                          </li>
+                        </ul>
+
+
+
+                      <ul class="navbar-nav mr-right mt-2 mt-lg-0 justify-content-end">
+                      <li class="nav-item active">
+                        <a class="nav-link " style="color: #50c9e3" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1025px-Instagram-Icon.png" width="30" height="30" alt="" loading="lazy"></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link " style="color: #50c9e3" href="#"><img src="https://i.pinimg.com/originals/b3/26/b5/b326b5f8d23cd1e0f18df4c9265416f7.png" width="30" height="30" alt="" loading="lazy"></a>
+                      </li>
+
+
+
+                      {% if user.is_authenticated %}
+                      <li class="nav-item active">
+                        <a class="nav-link" style="color: #50c9e3" href="#">{{ user.username }}<span class="sr-only">(current)</span></a>
+                      </li>
+                       <li class="nav-item active">
+                        <a class="nav-link" style="color: #50c9e3" href="{% url 'logout' %}">Odhlásit se<span class="sr-only">(current)</span></a>
+                      </li>
+                      {% else %}
+                      <li class="nav-item active">
+                        <a class="nav-link" style="color: #50c9e3" href="{% url 'login' %}">Přihlásit se<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" style="color: #50c9e3" href="{% url 'registrace' %}">Přihláška<span class="sr-only">(current)</span></a>
+                      </li>
+                      {% endif %}
+                    </ul>
+
+              </div>
+        </div>
+    </nav>

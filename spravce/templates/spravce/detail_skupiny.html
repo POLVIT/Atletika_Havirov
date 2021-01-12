@@ -1,0 +1,44 @@
+{% extends 'Atletika_Havirov/base.html' %}
+
+{% block body_block %}
+    <form method="post">{% csrf_token %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Trenéři</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for t in treneri %}
+        <tr>
+            <td>{{ t.user.osobniinformace.jmeno }}
+                {{ t.user.osobniinformace.prijmeni }}</td>
+            <td>{{ t.user.osobniinformace.datum_narozeni }}</td>
+            <td><button type="submit" class="btn btn-primary" name="atlet" value="{{ t.user.id }}">Atlet</button> </td>
+            <td><button type="submit" class="btn btn-danger" name="odstranit" value="{{ t.user.id }}">Odstranit</button> </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Atleti</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for c in clenove %}
+            <tr>
+                <td>{{ c.user.osobniinformace.jmeno }}
+                    {{ c.user.osobniinformace.prijmeni }}</td>
+                <td>{{ c.user.osobniinformace.datum_narozeni }}</td>
+                <td><button type="submit" class="btn btn-primary" name="trener" value="{{ c.user.id }}">Trenér</button> </td>
+                <td><button type="submit" class="btn btn-danger" name="odstranit" value="{{ c.user.id }}">Odstranit</button> </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </form>
+
+{%  endblock %}

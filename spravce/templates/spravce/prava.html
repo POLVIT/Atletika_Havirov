@@ -1,0 +1,23 @@
+{% extends 'Atletika_Havirov/base.html' %}
+
+{% block body_block %}
+    {{ user.jmeno }} {{ user.prijmeni }}
+    <table class="table">
+    <form method="post">{% csrf_token %}
+        <tbody>
+        <tr>
+            <td>Mediátor</td>
+            <td><button class="btn btn-danger" name="{% if prava.mediator %}mediator_odebrat{% else %}mediator_pridat{% endif %}" value="True">
+                {% if prava.mediator %}Odebrat{% else %}Přidat{% endif %}
+            </button></td>
+        </tr>
+        <tr>
+            <td>Správce</td>
+            <td><button type="submit" class="btn btn-danger" name="{% if prava.spravce %}spravce_odebrat{% else %}spravce_pridat{% endif %}" value="True">
+                {% if prava.spravce %}Odebrat{% else %}Přidat{% endif %}
+            </button></td>
+        </tr>
+
+    </form>
+    </table>
+{%  endblock %}

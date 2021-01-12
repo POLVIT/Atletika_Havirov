@@ -1,0 +1,14 @@
+{% extends 'Atletika_Havirov/base.html' %}
+
+{% block body_block %}
+   <form method="post">{% csrf_token %}
+   {{ form.as_p }}
+   <button type="submit" class="btn btn-success"> Uložit </button>
+   <a href="{% url 'prehled' %}" class="btn btn-secondary">Zpět</a>
+   </form>
+
+    {% for q in query %}
+    {{ q }}
+    {% endfor %}
+
+{%  endblock %}

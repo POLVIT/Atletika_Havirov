@@ -1,0 +1,17 @@
+{% extends 'Atletika_Havirov/base.html' %}
+{% block body_block %}
+
+    <div class="container mt-1">
+        <div class="content-section">
+            <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-primary">Přihlásit</button><br>
+            <small><a href="{% url 'password_reset' %}">Zapomněli jste heslo?</a> </small>
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,230 @@
+{% extends 'Atletika_Havirov/BaseNoNavbar.html' %}
+{% block body_block %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="container bg bg-secondary">
+    <div class="col mb-3">
+    {{ prispevek.text }}
+    </div>
+    <form method="post">{% csrf_token %}
+
+         {% for fotka in fotky %}
+           <div class="col-12 custom-control custom-checkbox image-checkbox m-3 ">
+                      <label class="block-check" >
+					  <img src="{{ fotka.file.url}}" class="img-responsive " style="max-width: 90%" />
+                      <input type="checkbox" name="{{ fotka.id }}">
+					  <span class="checkmark"></span>
+					  </label>
+            </div>
+            
+        {% endfor %}
+            <div class="container fixed-bottom">
+            <nav class="nav bg-dark row " >
+            <button class="btn btn-outline-primary col " type="submit" name="PouzitCele" value="True">Použít celý příspěvek</button>
+            <button class="btn btn-outline-info col"  type="submit" name="ulozit" value="True">Uložit vybrané fotky</button>
+            <button class="btn btn-outline-danger col " type="submit" name="smazat" value="True">SMAZAT vybrané</button>
+            <a class="btn btn-outline-success col" href="{% url 'mediator_home' %}">Zpět</a>
+            </nav></div>
+
+    </form>
+</div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        // init the state from the input
+        $(".image-checkbox").each(function () {
+            if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
+                $(this).addClass('image-checkbox-checked');
+            }
+            else {
+                $(this).removeClass('image-checkbox-checked');
+            }
+        });
+
+        // sync the state to the input
+        $(".image-checkbox").on("click", function (e) {
+            if ($(this).hasClass('image-checkbox-checked')) {
+                $(this).removeClass('image-checkbox-checked');
+                $(this).find('input[type="checkbox"]').first().removeAttr("checked");
+            }
+            else {
+                $(this).addClass('image-checkbox-checked');
+                $(this).find('input[type="checkbox"]').first().attr("checked", "checked");
+            }
+
+            e.preventDefault();
+        });
+    });
+</script>
+
+<style>
+  a {
+    color: #fff;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+/*--choice modal1--*/
+
+.openbtn{
+    margin-top:80px;
+}
+.modal-header {
+    padding: 15px;
+     border-bottom: none;
+}
+.modal-title{
+	font-weight:bold;
+}
+.modal-body.choice-modal{
+    position: relative;
+    padding: 0px;
+
+}
+
+.row.inner-scroll {
+    height: 445px;
+    overflow: auto;
+}
+
+.mycard-footer {
+    height: 25px;
+    background: #333333;
+    font-size: 15px;
+    text-indent: 10px;
+   /* border-radius: 0 0px 4px 4px;*/
+}
+
+.gallery-card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+	    height: 132px;
+		margin-bottom:14px;
+}
+.gallery-card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    /*padding: 1.25rem;*/
+}
+.gallery-card img {
+    height: 100px;
+    width: 100%;
+}
+label{
+    margin-bottom: 0 !important;
+}
+/*--checkbox--*/
+
+.block-check {
+    display: block;
+    position: relative;
+
+
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.block-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+	cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.block-check:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.block-check input:checked ~ .checkmark {
+    background-color: #2196F3;
+    border-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.block-check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.block-check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+</style>
+
+{%  endblock %}
+
+{% comment %}
+Oznacovani kliknutim na fotku
+
+
+
+
+
+<div class="jumbotron">
+{{ prispevek.text}}
+  <hr class="my-4">
+    {# pseudo galerie #}
+
+    <ul class="list-inline"><div class="row btn-group" data-toggle="buttons">
+        {% for photo in prispevek.prispevekfiles_set.all %}
+        <div class="col-4 m-0 p-0">
+            <div class="card " style="width: 18rem;">
+                 <li data-toggle="modal" data-target="#myModal">
+                      <a href="#myGalery" data-slide-to="{{ forloop.counter }}">
+                        <img class="card-img-top" src="{{ photo.file.url }}">
+                      </a>
+                </li>
+            </div>
+        </div>
+        {% endfor %}
+    </div></ul>
+{% endcomment %}

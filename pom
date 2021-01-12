@@ -1,0 +1,52 @@
+@login_required
+@permission_required('ucty.mediator')
+def novyPrispevek(request):
+    url_uloziste = url_v_uloziste() #data pro modal
+    try:
+        urls = request.session.get('paths')
+        if not urls: urls = '' #je to tu k vuli podmince v poslednim returnu, urls nesmi byt None
+    except KeyError: urls = ''
+
+    try: text = request.session.get('text')
+    except KeyError: text = ''
+
+
+    if request.method=='POST':
+        post=CreatePostForm(request.POST)
+        post.initial={'text':text, 'url':urls}
+        ######################################################
+        if request.POST.get('nahratModal'):
+            for url in url_uloziste:
+                if request.POST.get(f'{url}'): urls+=f'{url},'
+            request.session['paths']=urls
+            return redirect('mediator_novy_prispevek')
+        ###################################################
+        if request.POST.get('delete'):
+            urls=urls.replace(f"{request.POST.get('delete')},",'')
+            request.session['paths']=urls
+            return redirect('mediator_novy_prispevek')
+        ######################################################
+        if request.POST.get('nahrat') and post.is_valid():
+            post.save(commit=False)
+            createPost.objects.create(fb_time=post.cleaned_data.get('fb_time'),
+                                      ig_time=post.cleaned_data.get('ig_time'),
+                                      web_post=post.cleaned_data.get('web_post'),
+                                      titulek=post.cleaned_data.get('titulek'),
+                                      text=post.cleaned_data.get('text'),
+                                      foto_urls=post.cleaned_data.get('url'))
+            messages.success(request, 'Váš příspěvek byl vytvořen')
+            try:    del request.session['paths']
+            except KeyError: pass
+            try:    del request.session['text']
+            except KeyError: pass
+        return redirect('pripravene')
+        ######################################################
+    else:
+        post=CreatePostForm()
+        post.initial = {'text': text, 'url': urls}
+
+    return render(request, 'mediator/pripravit_prispevek.html',
+                  context={'form': post,
+                           'urls': url_uloziste,  # urls v ulozisti (MODAL)
+                           'URL': urls[0:-1].rsplit(',') if urls.__len__() > 0 else None # url zadané do pole URL
+                           })

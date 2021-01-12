@@ -1,0 +1,18 @@
+{% autoescape off %}
+Dobrý den,
+
+velmi nás těší Váš zájem o atletiku. Níže jsou uvedeny Vaše přihlašovací údaje.
+Po potvrzení Vaší přihlášky se můžete přihlásit do Vašeho atletického profilu.
+Pro splnění všech podmínek členství v atletickém klubu je třeba nahrát
+vyplněné a podepsané prohlášení o GDPR a potvrzení o způsobilosti atleta k atletice
+od doktora. Zaplacení členského příspěvku. Všechny informace naleznete po přihlášení
+ve svém profilu.
+
+Přihlášovací údaje
+    přihlašovací jméno:{{ username }}
+    heslo: {{ RC }}, heslo můžete změnit
+
+Pihlášku aktivujete klikmutím na odkaz:
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}

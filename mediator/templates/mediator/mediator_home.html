@@ -1,0 +1,19 @@
+{% extends 'Atletika_Havirov/base.html' %}
+
+{% block body_block %}
+    <div class="row">
+    {% for prispevek in prispevky %}
+
+            <div class="col-4 my-3">
+                <div class="card " style="width: 18rem;">
+                      <img src="{{ prispevek.prispevekfiles_set.first.file.url }}" class="card-img-top" alt="BEZ FOTKY!">
+                      <div class="card-body">
+                            <p class="card-text">{{ prispevek.text|slice:":85"  }}</p>
+                            <a href="{% url 'detail_prispevku' prispevek.id %}" class="btn btn-primary">Zobrazit</a>
+                      </div>
+                </div>
+            </div>
+
+    {% endfor %}
+     </div>
+{%  endblock %}

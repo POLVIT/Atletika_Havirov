@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:Github/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04d9dcee-dea0-4c65-95f4-30edda6ec364" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="e72b2823-e3f2-4c2d-875f-22ba29aad1cd" />
+  <component name="ProjectId" id="1lEbuW6338Kqn9kfMl4CQDp5nS8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Atletika_Havirov" />
+      <recent name="$PROJECT_DIR$/templates/Atletika_Havirov" />
+      <recent name="$PROJECT_DIR$/mediator/static/mediator/js" />
+      <recent name="$PROJECT_DIR$/templates/Atletika_Havirov/registration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/Atletika_Havirov" />
+      <recent name="$PROJECT_DIR$/trener/tempates/trener" />
+      <recent name="$PROJECT_DIR$/spravce/templates/spravce" />
+      <recent name="$PROJECT_DIR$/spravce" />
+      <recent name="$PROJECT_DIR$/mediator/templates/mediator" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Atletika_Havirov" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Atletika_Havirov" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$PROJECT_DIR$/../.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04d9dcee-dea0-4c65-95f4-30edda6ec364" name="Default Changelist" comment="" />
+      <created>1607165420735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607165420735</updated>
+      <workItem from="1607165437394" duration="24583000" />
+      <workItem from="1607248919303" duration="24588000" />
+      <workItem from="1607333169992" duration="7298000" />
+      <workItem from="1607356459755" duration="21000" />
+      <workItem from="1607370405215" duration="3806000" />
+      <workItem from="1607379702616" duration="1026000" />
+      <workItem from="1607383342974" duration="532000" />
+      <workItem from="1607419745334" duration="10380000" />
+      <workItem from="1607504305198" duration="25153000" />
+      <workItem from="1607540170679" duration="2389000" />
+      <workItem from="1607552627823" duration="1380000" />
+      <workItem from="1607598022468" duration="9419000" />
+      <workItem from="1607677086613" duration="19302000" />
+      <workItem from="1607758193436" duration="34739000" />
+      <workItem from="1607862197788" duration="24823000" />
+      <workItem from="1607974517790" duration="4126000" />
+      <workItem from="1608022016878" duration="7177000" />
+      <workItem from="1608036530244" duration="11535000" />
+      <workItem from="1608110874773" duration="20914000" />
+      <workItem from="1608192117508" duration="10416000" />
+      <workItem from="1608282965247" duration="11030000" />
+      <workItem from="1608367147800" duration="7042000" />
+      <workItem from="1608541940147" duration="22262000" />
+      <workItem from="1608578463381" duration="4972000" />
+      <workItem from="1608625200735" duration="19976000" />
+      <workItem from="1609148492522" duration="761000" />
+      <workItem from="1609149276526" duration="76000" />
+      <workItem from="1609924988165" duration="1904000" />
+      <workItem from="1609931829101" duration="5396000" />
+      <workItem from="1609939008927" duration="11143000" />
+      <workItem from="1610480136563" duration="1493000" />
+      <workItem from="1610481660426" duration="1826000" />
+      <workItem from="1610483514092" duration="153000" />
+      <workItem from="1610483684860" duration="5000" />
+    </task>
+    <task id="LOCAL-00001" summary="OS variables">
+      <created>1609936997282</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609936997282</updated>
+    </task>
+    <task id="LOCAL-00002" summary="OS variables">
+      <created>1610481093632</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610481093632</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Github/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="OS variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="OS variables" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="404" y="205" width="548" height="324" key="#Notifications" timestamp="1610482794071">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="404" y="205" width="548" height="324" key="#Notifications/0.0.1366.741@0.0.1366.741" timestamp="1610482794071" />
+    <state x="278" y="31" width="800" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607422262564">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="278" y="31" width="800" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.741@0.0.1366.741" timestamp="1607422262564" />
+    <state x="1739" y="186" width="504" height="400" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607774968449">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="174" width="529" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.741@0.0.1366.741" timestamp="1607429873262" />
+    <state x="302" y="179" width="472" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2966.741@0.0.2966.741" timestamp="1607695634510" />
+    <state x="1739" y="186" width="504" height="400" key="#com.intellij.fileTypes.FileTypeChooser/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1607774968449" />
+    <state x="281" y="0" width="794" height="736" key="CommitChangelistDialog2" timestamp="1610481093388">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="281" y="0" width="794" height="736" key="CommitChangelistDialog2/0.0.1366.741@0.0.1366.741" timestamp="1610481093388" />
+    <state x="466" y="114" width="424" height="506" key="FileChooserDialogImpl" timestamp="1610483561666">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="466" y="114" width="424" height="506" key="FileChooserDialogImpl/0.0.1366.741@0.0.1366.741" timestamp="1610483561666" />
+    <state x="422" y="195" width="529" height="218" key="Github.ShareDialog" timestamp="1610482828733">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="422" y="195" width="529" height="218" key="Github.ShareDialog/0.0.1366.741@0.0.1366.741" timestamp="1610482828733" />
+    <state x="466" y="71" width="423" height="592" key="Github.UntrackedFilesDialog" timestamp="1609933144061">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="466" y="71" width="423" height="592" key="Github.UntrackedFilesDialog/0.0.1366.741@0.0.1366.741" timestamp="1609933144061" />
+    <state width="1324" height="170" key="GridCell.Tab.0.bottom" timestamp="1608036514810">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="170" key="GridCell.Tab.0.bottom/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514810" />
+    <state width="1324" height="170" key="GridCell.Tab.0.center" timestamp="1608036514810">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="170" key="GridCell.Tab.0.center/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514810" />
+    <state width="1324" height="170" key="GridCell.Tab.0.left" timestamp="1608036514810">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="170" key="GridCell.Tab.0.left/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514810" />
+    <state width="1324" height="170" key="GridCell.Tab.0.right" timestamp="1608036514810">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="170" key="GridCell.Tab.0.right/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514810" />
+    <state width="1324" height="212" key="GridCell.Tab.1.bottom" timestamp="1608036514806">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.1.bottom/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514806" />
+    <state width="1324" height="212" key="GridCell.Tab.1.center" timestamp="1608036514805">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.1.center/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514805" />
+    <state width="1324" height="212" key="GridCell.Tab.1.left" timestamp="1608036514805">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.1.left/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514805" />
+    <state width="1324" height="212" key="GridCell.Tab.1.right" timestamp="1608036514806">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.1.right/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514806" />
+    <state width="1324" height="212" key="GridCell.Tab.2.bottom" timestamp="1608036514806">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.2.bottom/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514806" />
+    <state width="1324" height="212" key="GridCell.Tab.2.center" timestamp="1608036514806">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.2.center/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514806" />
+    <state width="1324" height="212" key="GridCell.Tab.2.left" timestamp="1608036514806">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.2.left/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514806" />
+    <state width="1324" height="212" key="GridCell.Tab.2.right" timestamp="1608036514806">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.2.right/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608036514806" />
+    <state width="222" height="457" key="HiddenNamespacesPopup" timestamp="1607422215538">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state width="222" height="457" key="HiddenNamespacesPopup/0.0.1366.741@0.0.1366.741" timestamp="1607422215538" />
+    <state x="507" y="93" width="342" height="547" key="RollbackChangesDialog" timestamp="1610480817791">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="507" y="93" width="342" height="547" key="RollbackChangesDialog/0.0.1366.741@0.0.1366.741" timestamp="1610480817791" />
+    <state x="187" y="4" key="SettingsEditor" timestamp="1610483618006">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="187" y="4" key="SettingsEditor/0.0.1366.741@0.0.1366.741" timestamp="1610483618006" />
+    <state x="278" y="105" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1610483656725">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="278" y="105" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1366.741@0.0.1366.741" timestamp="1610483656725" />
+    <state x="100" y="99" width="1166" height="541" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1610480512150">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="100" y="99" width="1166" height="541" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.741@0.0.1366.741" timestamp="1610480512150" />
+    <state x="2057" y="115" width="673" height="703" key="search.everywhere.popup" timestamp="1608377196827">
+      <screen x="1600" y="0" width="1366" height="768" />
+    </state>
+    <state x="457" y="111" width="672" height="678" key="search.everywhere.popup/0.0.1366.741@0.0.1366.741" timestamp="1607370963561" />
+    <state x="992" y="111" width="1460" height="678" key="search.everywhere.popup/0.0.2966.741@0.0.2966.741" timestamp="1607690185037" />
+    <state x="2057" y="115" width="673" height="703" key="search.everywhere.popup/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1608377196827" />
+    <state x="516" y="163" width="324" height="407" key="svn.repositoryBrowser" timestamp="1610482293652">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="516" y="163" width="324" height="407" key="svn.repositoryBrowser/0.0.1366.741@0.0.1366.741" timestamp="1610482293652" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="url_uloziste" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

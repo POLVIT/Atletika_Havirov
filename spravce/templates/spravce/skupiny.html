@@ -1,0 +1,30 @@
+{% extends 'Atletika_Havirov/base.html' %}
+
+{% block body_block %}
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" name="vytvor_skupinu" value="True">Vytvoř skupinu</button>
+
+
+    <table class="table">
+        <thead>
+        <th scope="col">Název</th>
+        <th scope="col">Počet členů</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        </thead>
+        <tbody>
+        {% for s in skupiny %}
+        <tr>
+            <td><a href="{% url 'detail_skupiny' id=s.id  %}">{{ s.nazev }}</a></td>
+            <td>{{ s.clenove.count }}</td>
+            <td><button class="btn btn-primary" type="button" name="napsat_trenerum" value="True"> Napsat trenerům</button></td>
+            <td><button class="btn btn-primary" type="submit" name="napsat_vsem" value="True"> Napsat celé skupině</button></td>
+            <td><button class="btn btn-danger" type="submit" name="vymazat_skupinu" value="{{ s.id }}"> Vymazat skupinu</button></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </form>
+{%  endblock %}

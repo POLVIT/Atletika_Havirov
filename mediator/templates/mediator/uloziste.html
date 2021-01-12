@@ -1,0 +1,60 @@
+{% extends 'Atletika_Havirov/base.html' %}
+{% block publicnavbar %}
+
+{% endblock %}
+{% block body_block %}
+            <form method="post" enctype="multipart/form-data"> {% csrf_token %}
+            {{ form }}
+            <input type="submit">
+            </form>
+        <div class="row">
+        {% for url in urls %}
+            <!-- Grid row -->
+
+
+
+              <!-- Grid column -->
+              <div class="col-4  mb-4">
+
+                <!--Modal: Name-->
+                <div class="modal fade" id="modal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl" role="document">
+
+                    <!--Content-->
+                    <div class="modal-content">
+
+                      <!--Body-->
+                      <div class="modal-body mb-0 p-0 text-center">
+
+
+                          <img class="embed-responsive-item" src="{{ url }}" style="max-width: 100%;" >
+
+
+                      </div>
+
+                      <!--Footer-->
+                      <div class="modal-footer justify-content-center">
+
+                        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+
+                      </div>
+
+                    </div>
+                    <!--/.Content-->
+
+                  </div>
+                </div>
+                <!--Modal: Name-->
+
+                <a><img class="img-fluid z-depth-1" src="{{ url }}" alt="video"
+                    data-toggle="modal" data-target="#modal{{ forloop.counter }}"></a>
+
+              </div>
+
+        {% endfor %}
+        </div>
+
+
+
+
+{%  endblock %}

@@ -1,0 +1,31 @@
+{% extends 'Atletika_Havirov/base.html' %}
+
+{% block body_block %}
+     <table class="table table-bordered table-dark">
+     <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Facebook</th>
+          <th scope="col">Instagram</th>
+          <th scope="col">WEB</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+     </thead>
+      <tbody>
+     {% for p in prispevky %}
+    <tr>
+      <th scope="row">{{ p.id }}</th>
+      <td {% if p.fb_post %}class="table-success" style="color:black " {% endif %} >{{ p.fb_time }}</td>
+      <td {% if p.ig_post %}class="table-success" style="color:black " {% endif %} >{{ p.ig_time }}</td>
+      {% if p.web_post %}<td class="bg-succes"></td>{% else %}<td class="bg-danger"></td>{% endif %}
+      <td><a href="{% url 'kopie_prispevku' id=p.id %}" class="btn btn-secondary">Vytvořit novou kopii</a></td>
+      <td><a href="{% url 'update_prispevku' id=p.id %}" class="btn btn-secondary">Upravit stávající</a> </td>
+    </tr>
+
+
+
+     {% endfor %}
+       </tbody>
+     </table>
+{%  endblock %}
