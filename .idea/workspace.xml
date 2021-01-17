@@ -9,32 +9,25 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:Github" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:Github" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:Github/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04d9dcee-dea0-4c65-95f4-30edda6ec364" name="Default Changelist" comment="" />
+    <list default="true" id="04d9dcee-dea0-4c65-95f4-30edda6ec364" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/Atletika_Havirov/s01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Atletika_Havirov/s02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Atletika_Havirov/s03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/verejna_cast/templates/verejna_cast/pom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Atletika_Havirov/new_nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Atletika_Havirov/new_nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verejna_cast/templates/verejna_cast/uvod.html" beforeDir="false" afterPath="$PROJECT_DIR$/verejna_cast/templates/verejna_cast/uvod.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +52,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JupyterTrust" id="e72b2823-e3f2-4c2d-875f-22ba29aad1cd" />
   <component name="ProjectId" id="1lEbuW6338Kqn9kfMl4CQDp5nS8" />
@@ -71,23 +65,23 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/Atletika_Havirov" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Atletika_Havirov" />
-      <recent name="$PROJECT_DIR$/templates/Atletika_Havirov" />
-      <recent name="$PROJECT_DIR$/mediator/static/mediator/js" />
-      <recent name="$PROJECT_DIR$/templates/Atletika_Havirov/registration" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/Atletika_Havirov" />
       <recent name="$PROJECT_DIR$/trener/tempates/trener" />
       <recent name="$PROJECT_DIR$/spravce/templates/spravce" />
       <recent name="$PROJECT_DIR$/spravce" />
       <recent name="$PROJECT_DIR$/mediator/templates/mediator" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Atletika_Havirov" />
+      <recent name="$PROJECT_DIR$/templates/Atletika_Havirov" />
+      <recent name="$PROJECT_DIR$/mediator/static/mediator/js" />
+      <recent name="$PROJECT_DIR$/templates/Atletika_Havirov/registration" />
     </key>
   </component>
   <component name="RunManager">
@@ -160,6 +154,8 @@
       <workItem from="1610481660426" duration="1826000" />
       <workItem from="1610483514092" duration="153000" />
       <workItem from="1610483684860" duration="5000" />
+      <workItem from="1610483707222" duration="933000" />
+      <workItem from="1610888669669" duration="8967000" />
     </task>
     <task id="LOCAL-00001" summary="OS variables">
       <created>1609936997282</created>
@@ -175,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610481093632</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tu neco zkusam">
+      <created>1610483918454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610483918454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +195,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Github/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -210,7 +213,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="OS variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="OS variables" />
+    <MESSAGE value="Tu neco zkusam" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tu neco zkusam" />
   </component>
   <component name="WindowStateProjectService">
     <state x="404" y="205" width="548" height="324" key="#Notifications" timestamp="1610482794071">
@@ -227,18 +231,18 @@
     <state x="413" y="174" width="529" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.741@0.0.1366.741" timestamp="1607429873262" />
     <state x="302" y="179" width="472" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2966.741@0.0.2966.741" timestamp="1607695634510" />
     <state x="1739" y="186" width="504" height="400" key="#com.intellij.fileTypes.FileTypeChooser/1600.0.1366.768/0.0.1600.741@1600.0.1366.768" timestamp="1607774968449" />
-    <state x="281" y="0" width="794" height="736" key="CommitChangelistDialog2" timestamp="1610481093388">
+    <state x="281" y="0" width="794" height="736" key="CommitChangelistDialog2" timestamp="1610483909640">
       <screen x="0" y="0" width="1366" height="741" />
     </state>
-    <state x="281" y="0" width="794" height="736" key="CommitChangelistDialog2/0.0.1366.741@0.0.1366.741" timestamp="1610481093388" />
-    <state x="466" y="114" width="424" height="506" key="FileChooserDialogImpl" timestamp="1610483561666">
+    <state x="281" y="0" width="794" height="736" key="CommitChangelistDialog2/0.0.1366.741@0.0.1366.741" timestamp="1610483909640" />
+    <state x="466" y="114" width="424" height="506" key="FileChooserDialogImpl" timestamp="1610483802905">
       <screen x="0" y="0" width="1366" height="741" />
     </state>
-    <state x="466" y="114" width="424" height="506" key="FileChooserDialogImpl/0.0.1366.741@0.0.1366.741" timestamp="1610483561666" />
-    <state x="422" y="195" width="529" height="218" key="Github.ShareDialog" timestamp="1610482828733">
+    <state x="466" y="114" width="424" height="506" key="FileChooserDialogImpl/0.0.1366.741@0.0.1366.741" timestamp="1610483802905" />
+    <state x="422" y="195" width="529" height="218" key="Github.ShareDialog" timestamp="1610483959284">
       <screen x="0" y="0" width="1366" height="741" />
     </state>
-    <state x="422" y="195" width="529" height="218" key="Github.ShareDialog/0.0.1366.741@0.0.1366.741" timestamp="1610482828733" />
+    <state x="422" y="195" width="529" height="218" key="Github.ShareDialog/0.0.1366.741@0.0.1366.741" timestamp="1610483959284" />
     <state x="466" y="71" width="423" height="592" key="Github.UntrackedFilesDialog" timestamp="1609933144061">
       <screen x="0" y="0" width="1366" height="741" />
     </state>
@@ -303,14 +307,22 @@
       <screen x="0" y="0" width="1366" height="741" />
     </state>
     <state x="187" y="4" key="SettingsEditor/0.0.1366.741@0.0.1366.741" timestamp="1610483618006" />
-    <state x="278" y="105" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1610483656725">
+    <state x="278" y="105" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1610483952069">
       <screen x="0" y="0" width="1366" height="741" />
     </state>
-    <state x="278" y="105" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1366.741@0.0.1366.741" timestamp="1610483656725" />
+    <state x="278" y="105" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1366.741@0.0.1366.741" timestamp="1610483952069" />
     <state x="100" y="99" width="1166" height="541" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1610480512150">
       <screen x="0" y="0" width="1366" height="741" />
     </state>
     <state x="100" y="99" width="1166" height="541" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.741@0.0.1366.741" timestamp="1610480512150" />
+    <state x="528" y="107" width="299" height="520" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1610483745449">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="528" y="107" width="299" height="520" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.741@0.0.1366.741" timestamp="1610483745449" />
+    <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610483767752">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.741@0.0.1366.741" timestamp="1610483767752" />
     <state x="2057" y="115" width="673" height="703" key="search.everywhere.popup" timestamp="1608377196827">
       <screen x="1600" y="0" width="1366" height="768" />
     </state>
